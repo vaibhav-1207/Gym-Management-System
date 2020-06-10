@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="NewTrainerRegisterPane" fx:controller="sample.NewTrainerRegistrationController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="1229.0" style="-fx-background-color: #51e898;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="196.0" layoutY="19.0" text="New Trainer Registration">
+         <font>
+            <Font size="66.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="UsernameTextField" labelFloat="true" layoutX="250.0" layoutY="179.0" />
+      <JFXTextField fx:id="EmailTextField" layoutX="861.0" layoutY="184.0" />
+      <JFXTextField fx:id="AddressTextField" layoutX="860.0" layoutY="255.0" />
+      <Label layoutX="107.0" layoutY="179.0" text="UserName">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="263.0" text="Password">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="729.0" layoutY="259.0" text="Address">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="739.0" layoutY="189.0" text="Email">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="590.0" text="Add" onAction="#AddNewTrainerButtonHandler">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="54.0" layoutY="580.0" text="Cancel" onAction="#CancelNewTrainerButtonHandler">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="121.0" layoutY="339.0" text="Phone">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="PhoneTextField" layoutX="250.0" layoutY="343.0" />
+      <JFXPasswordField fx:id="PasswordField" layoutX="250.0" layoutY="261.0" />
+   </children>
+</Pane>

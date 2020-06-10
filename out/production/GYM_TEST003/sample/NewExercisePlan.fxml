@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="ExercisePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="1229.0" style="-fx-background-color: #51e898;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.NewExercisePlanController">
+   <children>
+      <Label layoutX="266.0" layoutY="19.0" text="New Exercise Plan">
+         <font>
+            <Font size="66.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="ExerciseDescriptionField" labelFloat="true" layoutX="590.0" layoutY="179.0" prefHeight="26.0" prefWidth="253.0" />
+      <JFXTextField fx:id="EndTextField" layoutX="861.0" layoutY="344.0" />
+      <Label layoutX="307.0" layoutY="179.0" text="Exercise Discription">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="263.0" text="Equipment">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="749.0" layoutY="349.0" text="End">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="AddButton" style="-fx-background-color: #59cb59;" buttonType="RAISED" layoutX="1084.0" layoutY="590.0" text="Add" onAction="#AddNewExerciseButtonHandler">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="CancelButton" style="-fx-background-color: #59cb59;" buttonType="RAISED" layoutX="54.0" layoutY="580.0" text="Cancel" onAction="#CancelExerciseButtonHandler">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="141.0" layoutY="349.0" text="Start">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="StartTimeTextField" layoutX="260.0" layoutY="343.0" />
+      <JFXTextField fx:id="EquipmentTextField" layoutX="260.0" layoutY="263.0" />
+   </children>
+</Pane>

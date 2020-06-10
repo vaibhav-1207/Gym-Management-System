@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<Pane fx:id="AdminPagePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="1229.0" style="-fx-background-color: #51e898;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminPageController">
+   <children>
+      <Label layoutX="412.0" layoutY="9.0" text="Admin Page">
+         <font>
+            <Font size="66.0" />
+         </font>
+      </Label>
+      <JFXTabPane style="-fx-background-color: #51e898;" layoutY="106.0" prefHeight="494.0" prefWidth="1229.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Users">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="AddNewMemberButton" style="-fx-background-color: #59cb59;" buttonType="RAISED" layoutX="35.0" layoutY="400.0" text="Add New Member" onAction="#AddNewMemberButtonHandler">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                        </JFXButton>
+                         <JFXButton fx:id="DeleteNewMemberButton" style="-fx-background-color: #59cb59;" buttonType="RAISED" layoutX="235.0" layoutY="400.0" text="Delete Member" onAction="#DeleteMemberButtonHandler">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                        </JFXButton>
+                        <TableView fx:id="UserListTable" layoutX="14.0" layoutY="14.0" prefHeight="353.0" prefWidth="1201.0">
+                          <columns>
+                            <TableColumn fx:id="ID" prefWidth="166.0" text="ID" />
+                             <TableColumn fx:id="Name" prefWidth="198.0" text="Name" />
+                              <TableColumn fx:id="Phone" prefWidth="206.0" text="Phone" />
+                              <TableColumn fx:id="Address" prefWidth="244.0" text="Address" />
+                              <TableColumn fx:id="Email" prefWidth="203.0" text="Email" />
+
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Trainers">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="AddNewTrainerButton" style="-fx-background-color: #59cb59;" buttonType="RAISED" layoutX="56.0" layoutY="395.0" text="Add New Trainer" onAction="#AddNewTrainerButtonHandler">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                        </JFXButton>
+                        <TableView fx:id="TrainerListTable" layoutX="14.0" layoutY="14.0" prefHeight="356.0" prefWidth="1200.0">
+                          <columns>
+                            <TableColumn fx:id="TID" prefWidth="170.00003051757812" text="ID" />
+                            <TableColumn fx:id="TName" minWidth="0.0" prefWidth="177.00003051757812" text="Name" />
+                              <TableColumn fx:id="TPhone" prefWidth="231.0" text="Phone" />
+                              <TableColumn fx:id="TAddress" prefWidth="190.0" text="Address" />
+                              <TableColumn fx:id="TEmail" prefWidth="229.0" text="Email" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Equipments">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="AddNewEquipmentButton" style="-fx-background-color: #59cb59;" buttonType="RAISED" layoutX="83.0" layoutY="378.0" text="Add New Equipment" onAction="#AddNewEquipmentHandler">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                        </JFXButton>
+                        <TableView fx:id="EquipmentListTable" layoutX="14.0" layoutY="14.0" prefHeight="344.0" prefWidth="341.0">
+                          <columns>
+                            <TableColumn fx:id="EID" prefWidth="157.0" text="ID" />
+                            <TableColumn fx:id="EName" prefWidth="183.0" text="Name" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Exercise Plans">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="ExercisePlanTableView" layoutX="10.0" layoutY="11.0" prefHeight="408.0" prefWidth="1219.0">
+                          <columns>
+                            <TableColumn fx:id="PlanID" prefWidth="175.00006103515625" text="ID" />
+                            <TableColumn fx:id="PlanUsers" prefWidth="184.99996948242188" text="Users" />
+                              <TableColumn fx:id="PlanTrainers" prefWidth="213.0" text="Trainers" />
+                              <TableColumn fx:id="PlanEquipment" prefWidth="210.0" text="Equipments" />
+                              <TableColumn fx:id="PlanStartTime" prefWidth="202.0" text="Starting TIme" />
+                              <TableColumn fx:id="PlanEndTime" prefWidth="217.0" text="Ending Time" />
+                          </columns>
+                        </TableView>
+                     </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <JFXButton fx:id="LogOutButton" style="-fx-background-color: #59cb59;" buttonType="RAISED" layoutX="1069.0" layoutY="49.0" text="Log Out" onAction="#LogOutButtonHandler">
+              <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</Pane>
